@@ -54,3 +54,9 @@ helm uninstall helm-app
 ```
 kubectl scale deployment helm-app --replicas=0
 ```
+## Screenshots
+![screenshot-1](img/problem2-ss-1.png)
+![screenshot-2](img/problem2-ss-2.png)
+![screenshot3](img/problem2-ss3.png)
+![screenshot4](img/problem2-ss4.png)
+![screenshot5](img/problem2-ss5.png)
