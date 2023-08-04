@@ -35,8 +35,8 @@ A zip file containing:
 ### To run the Kubernetes deployment using Helm 
 
 ```
-git clone
-cd 
+git clone https://github.com/vishu-25/mavQ-problem-2.git
+cd mavQ-problem-2/
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm dependency update helm-app
