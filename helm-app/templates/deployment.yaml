@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: helm-app
+  template:
+    metadata:
+      labels:
+        app: helm-app
+    spec:
+      containers:
+        - name: helm-app
+          image: mmumshad/simple-webapp:latest
+          env:
+            - name: DATABASE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: helm-secrets
+                  key: database-user
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: helm-secrets
+                  key: database-password
+          ports:
+            - containerPort: 8083 
+
+          

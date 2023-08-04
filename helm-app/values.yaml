@@ -1,0 +1,8 @@
+
+replicaCount: 2
+
+# Database configuration
+database:
+  name: admin-db
+  user: admin
+  password: admin123
