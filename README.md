@@ -23,3 +23,34 @@ A zip file containing:
 - The helm charts of your components
 - Document explaining your work
 
+## Solution 
+
+### Dependencies
+ - [Docker](https://docs.docker.com/)
+ - [minikube](https://minikube.sigs.k8s.io/docs/start/)
+ - [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/)
+
+[Docker image used](https://hub.docker.com/r/mmumshad/simple-webapp/)
+
+### To run the Kubernetes deployment using Helm 
+
+```
+git clone
+cd 
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm dependency update helm-app
+helm install helm-app ./helm-app
+```
+
+### Stopping the Helm deployment
+
+```
+helm uninstall helm-app
+```
+
+#### To scale down the deployment replicas to zero, use the following ` kubectl ` command:
+
+```
+kubectl scale deployment helm-app --replicas=0
+```
